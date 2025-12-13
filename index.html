@@ -430,10 +430,10 @@ body.pl-clean .rotate-hint,
       bearing:25,
       antialias:true
     });
-
+if (!IS_MOBILE) {
     map.addControl(new maplibregl.NavigationControl({visualizePitch:true}), "top-right");
     map.addControl(new maplibregl.FullscreenControl({container:document.getElementById("app")}), "top-right");
-
+}
     /***** === Hover-Panel (Desktop) === *****/
     let hoverEl = null;
     function showHover(html){
