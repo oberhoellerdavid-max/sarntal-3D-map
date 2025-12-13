@@ -519,7 +519,7 @@ if (!IS_MOBILE) {
           id: lineId,
           type:"line",
           source: srcId,
-          paint:{ "line-color": color, "line-width": 3 },
+          paint:{ "line-color": color, "line-width": (IS_MOBILE ? 10 : 6) },
           layout:{ visibility:"visible" }
         });
 
