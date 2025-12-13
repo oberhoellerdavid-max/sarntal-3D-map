@@ -511,6 +511,7 @@ if (!IS_MOBILE) {
 
       const srcId  = baseId + "-src";
       const lineId = baseId + "-line";
+      const hitId  = baseId + "-hit";
 
       if(!map.getSource(srcId)) map.addSource(srcId, {type:"geojson", data: gj});
 
@@ -522,6 +523,16 @@ if (!IS_MOBILE) {
           paint:{ "line-color": color, "line-width": (IS_MOBILE ? 6 : 4) },
           layout:{ visibility:"visible" }
         });
+      map.addLayer({
+  id: hitId,
+  type: "line",
+  source: srcId,
+  paint: {
+    "line-color": "#000",
+    "line-width": IS_MOBILE ? 22 : 12,
+    "line-opacity": 0
+  }
+});
 
         if(!IS_MOBILE){
           map.on("mouseenter", lineId, (e)=>{
@@ -544,7 +555,7 @@ if (!IS_MOBILE) {
           });
         }
 
-        map.on("click", lineId, (e)=>{
+        map.on("click", hitId, (e)=>{
           const ctaText = I18N[currentLang].cta;
           const html = `
             <div class="plp-title">${title}</div>
