@@ -230,6 +230,24 @@ body.pl-clean .rotate-hint,
     @media (max-width: 768px) and (orientation: landscape){
       :root{--ui-scale:1.05;}
     }
+    /* ===== Mobile: Fullscreen-Button komplett ausblenden ===== */
+@media (max-width: 768px) {
+  #btnFullscreen {
+    display: none !important;
+  }
+
+  .maplibregl-ctrl-fullscreen {
+    display: none !important;
+  }
+
+  .maplibregl-ctrl-group.pl-fullscreen-ctrl {
+    display: none !important;
+  }
+}
+    /* === Logo komplett ausblenden === */
+#brandLogo {
+  display: none !important;
+}
   </style>
 </head>
 
@@ -294,17 +312,6 @@ body.pl-clean .rotate-hint,
   <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
   <script src="https://unpkg.com/@tmcw/togeojson@5.8.0/dist/togeojson.umd.js"></script>
   <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
-/* === Mobile: Fullscreen-Button ausblenden === */
-@media (max-width: 768px) {
-  #btnFullscreen {
-    display: none !important;
-  }
-
-  /* auch MapLibre-Fullscreen-Control ausblenden */
-  .maplibregl-ctrl-fullscreen {
-    display: none !important;
-  }
-}
   <script>
 
     
