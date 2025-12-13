@@ -248,16 +248,7 @@ body.pl-clean .rotate-hint,
 #brandLogo {
   display: none !important;
 }
-    /* === Mobile + Vollbild: Fullscreen-Icons ausblenden === */
-@media (max-width: 768px) {
-  #app:fullscreen #btnFullscreen {
-    display: none !important;
-  }
-
-  #app:fullscreen .maplibregl-ctrl-fullscreen {
-    display: none !important;
-  }
-}
+   
     @media (max-width: 768px) {
   #btnFullscreen,
   .maplibregl-ctrl-fullscreen {
@@ -268,19 +259,21 @@ body.pl-clean .rotate-hint,
   .maplibregl-ctrl-top-right {
     display: none !important;
   }
-}
-    /* === Mobile: Fullscreen-Icon unauffällig parken === */
+/* === iOS Mobile: MapLibre Fullscreen Icon entschärfen === */
 @media (max-width: 768px) {
 
+  /* gesamte Control-Gruppe verschieben */
   .maplibregl-ctrl-top-right {
     top: auto !important;
-    bottom: 12px !important;
-    right: 8px !important;
+    bottom: 6px !important;
+    right: 6px !important;
   }
 
+  /* Icon klein & unauffällig */
   .maplibregl-ctrl-fullscreen {
-    opacity: 0.25 !important;
-    transform: scale(0.9);
+    opacity: 0.15 !important;
+    transform: scale(0.75) !important;
+    pointer-events: none !important;
   }
 }
   </style>
