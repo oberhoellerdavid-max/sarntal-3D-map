@@ -363,31 +363,208 @@ body.pl-clean .rotate-hint,
     ];
 
     const HIKES_SUMMER = [
-      { baseId:"oettembacherAlmWindspitze", title:"Öttembacher Alm & Windspitze", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/ca80bd821b34e68cdf27c7d4ae02d4f3/raw/251f657fc08cf8717dd5c37e1bdc615877fad2c8/gistfile1.txt", color:"#0ea5e9", link:"https://www.komoot.com/de-de/tour/2690794753" },
-      { baseId:"pfattnerAlm", title:"Zur Pfattner Alm", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/886aa1fa21b855c1b3e94ba6d890b07a/raw/75b5ad91a65ced29c376274c2f776075df676f2a/gistfile1.txt", color:"#f97316", link:"https://www.komoot.com/de-de/tour/2690780734" },
-      { baseId:"traminerAlm", title:"Traminer Alm", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/360b727855bfe02064ae0870d5e6c3f5/raw/abe96d7f65973439f4c00992d28ebd2f4a60cd93/gistfile1.txt", color:"#ea580c", link:"https://www.komoot.com/de-de/tour/2690787869" },
-      { baseId:"putzerKreuzJenesingerJoechl", title:"Putzer Kreuz + Jenesinger Jöchl", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/6468a93747053ef562c0ff9f73e1b6c3/raw/2dd0fe8309a38e2f16d6bcacdf8dd7f816cb8879/gistfile1.txt", color:"#10b981", link:"https://www.komoot.com/de-de/tour/2690890796" },
-      { baseId:"leiterspitze", title:"Leiterspitze", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/42a0894dba7d43f8a88548c3df5e5a7f/raw/e1cfbd698c2454c2080afbc6c9aecddd98d3b4e4/gistfile1.txt", color:"#f97316", link:"https://www.komoot.com/de-de/tour/2690896338" },
-      { baseId:"durnholzerseeKofeljochAlmw", title:"Winter Kofeljoch Alm", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/1faa1453040e7695375afbfa971c6f0c/raw/063170b9ee27f413dc539cda143a333fb99a1685/gistfile1.txt", color:"#22c55e", link:"https://www.komoot.com/tour/2662887299" },
-      { baseId:"nachDurnholz", title:"Nach Durnholz", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/b6574d2c8df7dae1f46bc8fcdad1bd53/raw/15fa89bc0c19b5eb1574618bc39f16cfbafeebcc/gistfile1.txt", color:"#8b5cf6", link:"https://www.komoot.com/de-de/tour/2663206305" },
-      { baseId:"latzfonserKreuz", title:"Latzfonser Kreuz", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/e62978b29b60b46ad31b5b868c4bf489/raw/2bb2de53252a61a2f0fdb6a2ebf27aed55fe433c/gistfile1.txt", color:"#eab308", link:"https://www.komoot.com/de-de/tour/2662400499" },
-      { baseId:"getrumAlm", title:"Getrum Alm", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/f44d667d3267b9ab1ee94397a95ec0de/raw/26daebf33212084287225b19697a94a7f23dcab8/gistfile1.txt", color:"#3b82f6", link:"https://www.komoot.com/de-de/tour/2662532511" },
-      { baseId:"durnholzerSee", title:"Durnholzer See", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/acfcc6e1f70e0cc8dd0e5e6c434bb634/raw/eabe07106af82b313a7c81298e474d76773ed6b8/gistfile1.txt", color:"#8b5cf6", link:"https://www.komoot.com/tour/2662854349" },
-      { baseId:"skihuetteStoanerneMandln", title:"Skihütte Stoanerne Mandln", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/bd912558aef6c038e3f76084d54888f5/raw/3aa8e759a9095ab95c1d0bd7e8ad4297796d8cc3/gistfile1.txt", color:"#ef4444", link:"https://www.komoot.com/tour/2662874522" },
-    ];
+  const HIKES_SUMMER = [
+  {
+    baseId: "getrumAlm",
+    title: "Zur Getrum Alm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/2218a1e5abe273a4340b4250b195ed99/raw/5d9d1f0cc34272b4e3c2ab1e59a3c11fb71ea79c/gistfile1.txt",
+    color: "#3b82f6",
+    link: "https://www.komoot.com/tour/2662532511"
+  },
+  {
+    baseId: "pfattnerAlm",
+    title: "Zur Pfattner Alm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/886aa1fa21b855c1b3e94ba6d890b07a/raw/75b5ad91a65ced29c376274c2f776075df676f2a/gistfile1.txt",
+    color: "#f97316",
+    link: "https://www.komoot.com/de-de/tour/2690780734"
+  },
+  {
+    baseId: "traminerAlm",
+    title: "Zur Traminer Alm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/360b727855bfe02064ae0870d5e6c3f5/raw/abe96d7f65973439f4c00992d28ebd2f4a60cd93/gistfile1.txt",
+    color: "#ea580c",
+    link: "https://www.komoot.com/de-de/tour/2690787869"
+  },
+  {
+    baseId: "oettenbacherAlm",
+    title: "Zur Öttenbacher Alm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/a18e9c7050ff32c19b644c9558772aef/raw/e11327782ccc5c37726cd3b11f6f4029c83eefe5/gistfile1.txt",
+    color: "#0ea5e9",
+    link: "https://www.komoot.com/de-de/tour/2714794155"
+  },
+  {
+    baseId: "jenesingerJoechl",
+    title: "Zum Jenesinger Jöchl",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/6468a93747053ef562c0ff9f73e1b6c3/raw/2dd0fe8309a38e2f16d6bcacdf8dd7f816cb8879/gistfile1.txt",
+    color: "#10b981",
+    link: "https://www.komoot.com/de-de/tour/2690890796"
+  },
+  {
+    baseId: "pichlbergAlm",
+    title: "Zur Pichlberg Alm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/922d436d264e0f4a0545a4f3b3702da1/raw/17ec7c6bea346e153811d9cd02d34f7e4f3e1b09/gistfile1.txt",
+    color: "#f59e0b",
+    link: "https://www.komoot.com/de-de/tour/2689784267"
+  },
+  {
+    baseId: "kofeljochAlm",
+    title: "Zur Kofeljoch Alm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/e13a7929951126dabd25153fe796f969/raw/0d4402e51b7550788e356e8c3c987b545292a7cc/gistfile1.txt",
+    color: "#22d3ee",
+    link: "https://www.komoot.com/de-de/tour/2690954791"
+  },
+  {
+    baseId: "latzfonserKreuz",
+    title: "Zum Latzfonser Kreuz",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/bfb591ef19be949cdc63c02d301169fb/raw/fbb90c70fa2b7db52a523c707b092cf24bf237df/gistfile1.txt",
+    color: "#eab308",
+    link: "https://www.komoot.com/tour/2662400499"
+  },
+  {
+    baseId: "waldrastAlm",
+    title: "Zur Waldrast Alm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/f301b2c0df7637297722a30c164ff7a6/raw/a10ea1ed6eb42fa7d56d77133f3db5d639178aea/gistfile1.txt",
+    color: "#8b5cf6",
+    link: "https://www.komoot.com/tour/2714784571"
+  },
+  {
+    baseId: "sunnolm",
+    title: "Zur Sunnollm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/bb34a70b77f2046a54a62c55b017b3ef/raw/d65237c8eb117153249c7e0b7e3d4e452682bd29/gistfile1.txt",
+    color: "#14b8a6",
+    link: "https://www.komoot.com/tour/2714797847"
+  },
+  {
+    baseId: "sarnerTalrundweg",
+    title: "Sarner Talrundweg",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/40c03576fccf0b34d25280125bec63fb/raw/d7a0074fda3c14a034740c76962ae7e28ae0b73e/gistfile1.txt",
+    color: "#16a34a",
+    link: "https://www.komoot.com/tour/2662945355"
+  },
+  {
+    baseId: "durnholzerseeUmrundung",
+    title: "Durnholzersee Umrundung",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/acfcc6e1f70e0cc8dd0e5e6c434bb634/raw/eabe07106af82b313a7c81298e474d76773ed6b8/gistfile1.txt",
+    color: "#0ea5e9",
+    link: "https://www.komoot.com/tour/2662854349"
+  },
+  {
+    baseId: "reinswaldNachDurnholz",
+    title: "Von Reinswald nach Durnholz",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/b6574d2c8df7dae1f46bc8fcdad1bd53/raw/15fa89bc0c19b5eb1574618bc39f16cfbafeebcc/gistfile1.txt",
+    color: "#8b5cf6",
+    link: "https://www.komoot.com/de-de/tour/2663206305"
+  },
+  {
+    baseId: "stoanerneMandln",
+    title: "Zu den Stoanerne Mandln",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/62aaadffcbf6601cbe8ecbe883326eed/raw/a9a6dd798ab1c1c270ab2659facdc876b4b8b2e9/gistfile1.txt",
+    color: "#ef4444",
+    link: "https://www.komoot.com/tour/2662874522"
+  }
+ ];
 
     const HIKES_WINTER = [      
-     { baseId:"oettembacherAlmWindspitze", title:"Öttembacher Alm & Windspitze", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/ca80bd821b34e68cdf27c7d4ae02d4f3/raw/251f657fc08cf8717dd5c37e1bdc615877fad2c8/gistfile1.txt", color:"#0ea5e9", link:"https://www.komoot.com/de-de/tour/2690794753" },
-      { baseId:"pfattnerAlm", title:"Zur Pfattner Alm", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/886aa1fa21b855c1b3e94ba6d890b07a/raw/75b5ad91a65ced29c376274c2f776075df676f2a/gistfile1.txt", color:"#f97316", link:"https://www.komoot.com/de-de/tour/2690780734" },
-      { baseId:"traminerAlm", title:"Traminer Alm", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/360b727855bfe02064ae0870d5e6c3f5/raw/abe96d7f65973439f4c00992d28ebd2f4a60cd93/gistfile1.txt", color:"#ea580c", link:"https://www.komoot.com/de-de/tour/2690787869" },
-      { baseId:"putzerKreuzJenesingerJoechl", title:"Putzer Kreuz + Jenesinger Jöchl", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/6468a93747053ef562c0ff9f73e1b6c3/raw/2dd0fe8309a38e2f16d6bcacdf8dd7f816cb8879/gistfile1.txt", color:"#10b981", link:"https://www.komoot.com/de-de/tour/2690890796" },
-      { baseId:"nachDurnholz", title:"Nach Durnholz", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/b6574d2c8df7dae1f46bc8fcdad1bd53/raw/15fa89bc0c19b5eb1574618bc39f16cfbafeebcc/gistfile1.txt", color:"#8b5cf6", link:"https://www.komoot.com/de-de/tour/2663206305" },
-      { baseId:"talrundweg", title:"Talrundweg", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/40c03576fccf0b34d25280125bec63fb/raw/d7a0074fda3c14a034740c76962ae7e28ae0b73e/gistfile1.txt", color:"#14b8a6", link:"https://www.komoot.com/tour/2662945355" },
-      { baseId:"latzfonserKreuz", title:"Latzfonser Kreuz", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/e62978b29b60b46ad31b5b868c4bf489/raw/2bb2de53252a61a2f0fdb6a2ebf27aed55fe433c/gistfile1.txt", color:"#eab308", link:"https://www.komoot.com/de-de/tour/2662400499" },
-      { baseId:"getrumAlm", title:"Getrum Alm", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/f44d667d3267b9ab1ee94397a95ec0de/raw/26daebf33212084287225b19697a94a7f23dcab8/gistfile1.txt", color:"#3b82f6", link:"https://www.komoot.com/de-de/tour/2662532511" },
-      { baseId:"durnholzerSee", title:"Durnholzer See", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/acfcc6e1f70e0cc8dd0e5e6c434bb634/raw/eabe07106af82b313a7c81298e474d76773ed6b8/gistfile1.txt", color:"#8b5cf6", link:"https://www.komoot.com/tour/2662854349" },
-      { baseId:"skihuetteStoanerneMandln", title:"Skihütte Stoanerne Mandln", url:"https://gist.githubusercontent.com/oberhoellerdavid-max/bd912558aef6c038e3f76084d54888f5/raw/3aa8e759a9095ab95c1d0bd7e8ad4297796d8cc3/gistfile1.txt", color:"#ef4444", link:"https://www.komoot.com/tour/2662874522" },
-    ];
+const HIKES_SUMMER = [
+  {
+    baseId: "getrumAlm",
+    title: "Zur Getrum Alm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/2218a1e5abe273a4340b4250b195ed99/raw/5d9d1f0cc34272b4e3c2ab1e59a3c11fb71ea79c/gistfile1.txt",
+    color: "#3b82f6",
+    link: "https://www.komoot.com/tour/2662532511"
+  },
+  {
+    baseId: "pfattnerAlm",
+    title: "Zur Pfattner Alm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/886aa1fa21b855c1b3e94ba6d890b07a/raw/75b5ad91a65ced29c376274c2f776075df676f2a/gistfile1.txt",
+    color: "#f97316",
+    link: "https://www.komoot.com/de-de/tour/2690780734"
+  },
+  {
+    baseId: "traminerAlm",
+    title: "Zur Traminer Alm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/360b727855bfe02064ae0870d5e6c3f5/raw/abe96d7f65973439f4c00992d28ebd2f4a60cd93/gistfile1.txt",
+    color: "#ea580c",
+    link: "https://www.komoot.com/de-de/tour/2690787869"
+  },
+  {
+    baseId: "oettenbacherAlm",
+    title: "Zur Öttenbacher Alm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/a18e9c7050ff32c19b644c9558772aef/raw/e11327782ccc5c37726cd3b11f6f4029c83eefe5/gistfile1.txt",
+    color: "#0ea5e9",
+    link: "https://www.komoot.com/de-de/tour/2714794155"
+  },
+  {
+    baseId: "jenesingerJoechl",
+    title: "Zum Jenesinger Jöchl",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/6468a93747053ef562c0ff9f73e1b6c3/raw/2dd0fe8309a38e2f16d6bcacdf8dd7f816cb8879/gistfile1.txt",
+    color: "#10b981",
+    link: "https://www.komoot.com/de-de/tour/2690890796"
+  },
+  {
+    baseId: "pichlbergAlm",
+    title: "Zur Pichlberg Alm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/922d436d264e0f4a0545a4f3b3702da1/raw/17ec7c6bea346e153811d9cd02d34f7e4f3e1b09/gistfile1.txt",
+    color: "#f59e0b",
+    link: "https://www.komoot.com/de-de/tour/2689784267"
+  },
+  {
+    baseId: "kofeljochAlm",
+    title: "Zur Kofeljoch Alm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/e13a7929951126dabd25153fe796f969/raw/0d4402e51b7550788e356e8c3c987b545292a7cc/gistfile1.txt",
+    color: "#22d3ee",
+    link: "https://www.komoot.com/de-de/tour/2690954791"
+  },
+  {
+    baseId: "latzfonserKreuz",
+    title: "Zum Latzfonser Kreuz",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/bfb591ef19be949cdc63c02d301169fb/raw/fbb90c70fa2b7db52a523c707b092cf24bf237df/gistfile1.txt",
+    color: "#eab308",
+    link: "https://www.komoot.com/tour/2662400499"
+  },
+  {
+    baseId: "waldrastAlm",
+    title: "Zur Waldrast Alm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/f301b2c0df7637297722a30c164ff7a6/raw/a10ea1ed6eb42fa7d56d77133f3db5d639178aea/gistfile1.txt",
+    color: "#8b5cf6",
+    link: "https://www.komoot.com/tour/2714784571"
+  },
+  {
+    baseId: "sunnolm",
+    title: "Zur Sunnollm",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/bb34a70b77f2046a54a62c55b017b3ef/raw/d65237c8eb117153249c7e0b7e3d4e452682bd29/gistfile1.txt",
+    color: "#14b8a6",
+    link: "https://www.komoot.com/tour/2714797847"
+  },
+  {
+    baseId: "sarnerTalrundweg",
+    title: "Sarner Talrundweg",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/40c03576fccf0b34d25280125bec63fb/raw/d7a0074fda3c14a034740c76962ae7e28ae0b73e/gistfile1.txt",
+    color: "#16a34a",
+    link: "https://www.komoot.com/tour/2662945355"
+  },
+  {
+    baseId: "durnholzerseeUmrundung",
+    title: "Durnholzersee Umrundung",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/acfcc6e1f70e0cc8dd0e5e6c434bb634/raw/eabe07106af82b313a7c81298e474d76773ed6b8/gistfile1.txt",
+    color: "#0ea5e9",
+    link: "https://www.komoot.com/tour/2662854349"
+  },
+  {
+    baseId: "reinswaldNachDurnholz",
+    title: "Von Reinswald nach Durnholz",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/b6574d2c8df7dae1f46bc8fcdad1bd53/raw/15fa89bc0c19b5eb1574618bc39f16cfbafeebcc/gistfile1.txt",
+    color: "#8b5cf6",
+    link: "https://www.komoot.com/de-de/tour/2663206305"
+  },
+  {
+    baseId: "stoanerneMandln",
+    title: "Zu den Stoanerne Mandln",
+    url: "https://gist.githubusercontent.com/oberhoellerdavid-max/62aaadffcbf6601cbe8ecbe883326eed/raw/a9a6dd798ab1c1c270ab2659facdc876b4b8b2e9/gistfile1.txt",
+    color: "#ef4444",
+    link: "https://www.komoot.com/tour/2662874522"
+  }
+ ];
 
     /***** === Sprachtexte === *****/
  const I18N = {
