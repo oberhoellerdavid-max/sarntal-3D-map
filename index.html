@@ -66,7 +66,36 @@
     .btn{padding:8px 14px;border-radius:10px;font-weight:700;cursor:pointer;}
     .btn--primary{background:var(--accent);color:#fff;border:none;}
     .btn--primary:hover{background:var(--accent-hover);}
+/* ===== Mobile Rotate Hint ===== */
+.rotate-hint{
+  position:absolute;
+  left:50%;
+  bottom:64px;
+  transform:translateX(-50%);
+  z-index:3;
+  background:rgba(255,255,255,0.96);
+  border:1px solid rgba(0,0,0,0.05);
+  box-shadow:0 4px 14px rgba(0,0,0,0.1);
+  border-radius:12px;
+  padding:8px 12px;
+  font-family:'Adam',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  font-weight:700;
+  font-size:14px;
+  color:#1f2937;
+  display:none;
+  pointer-events:none;
+}
 
+/* Nur Handy + Portrait */
+@media (max-width: 768px) and (orientation: portrait){
+  .rotate-hint{ display:block; }
+}
+
+/* Clean Mode / Vollbild: aus */
+body.pl-clean .rotate-hint,
+#app:fullscreen .rotate-hint{
+  display:none !important;
+}
     /* Sprachschalter */
     #langSwitcher{
       position:absolute;right:12px;top:12px;z-index:4;
@@ -256,7 +285,11 @@
       <button id="btnHotel" class="btn btn--primary" data-i18n="btn_hotel">Zum Hotel</button>
     </div>
   </div>
-
+  
+<!-- Mobile Hinweis: Drehen für Vollbild -->
+<div id="rotateHint" class="rotate-hint" data-i18n="rotate_hint">
+  Drehen für Vollbild
+</div>
   <!-- Bibliotheken -->
   <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
   <script src="https://unpkg.com/@tmcw/togeojson@5.8.0/dist/togeojson.umd.js"></script>
@@ -309,11 +342,47 @@
     ];
 
     /***** === Sprachtexte === *****/
-    const I18N = {
-      de:{ summer_title:"Sommerwanderungen", summer_label:"Sommerwanderungen anzeigen", winter_title:"Winterwanderungen", winter_label:"Winterwanderungen anzeigen", bike_title:"Biken", bike_label:"Biketouren anzeigen", hut_title:"Hütten", hut_label:"Almhütten anzeigen", btn_hotel:"Zum Hotel", cta:"Tour auf Komoot öffnen" },
-      en:{ summer_title:"Summer Hikes", summer_label:"Show summer hikes", winter_title:"Winter Hikes", winter_label:"Show winter hikes", bike_title:"Biking", bike_label:"Show bike tours", hut_title:"Huts", hut_label:"Show mountain huts", btn_hotel:"To the hotel", cta:"Open tour on Komoot" },
-      it:{ summer_title:"Escursioni estive", summer_label:"Mostra escursioni estive", winter_title:"Escursioni invernali", winter_label:"Mostra escursioni invernali", bike_title:"Bike", bike_label:"Mostra tour in bici", hut_title:"Malge", hut_label:"Mostra malghe", btn_hotel:"Vai all’hotel", cta:"Apri il tour su Komoot" }
-    };
+ const I18N = {
+  de: {
+    summer_title: "Sommerwanderungen",
+    summer_label: "Sommerwanderungen anzeigen",
+    winter_title: "Winterwanderungen",
+    winter_label: "Winterwanderungen anzeigen",
+    bike_title: "Biken",
+    bike_label: "Biketouren anzeigen",
+    hut_title: "Hütten",
+    hut_label: "Almhütten anzeigen",
+    btn_hotel: "Zum Hotel",
+    cta: "Tour auf Komoot öffnen",
+    rotate_hint: "Drehen für Vollbild"
+  },
+  en: {
+    summer_title: "Summer Hikes",
+    summer_label: "Show summer hikes",
+    winter_title: "Winter Hikes",
+    winter_label: "Show winter hikes",
+    bike_title: "Biking",
+    bike_label: "Show bike tours",
+    hut_title: "Huts",
+    hut_label: "Show mountain huts",
+    btn_hotel: "To the hotel",
+    cta: "Open tour on Komoot",
+    rotate_hint: "Rotate for fullscreen"
+  },
+  it: {
+    summer_title: "Escursioni estive",
+    summer_label: "Mostra escursioni estive",
+    winter_title: "Escursioni invernali",
+    winter_label: "Mostra escursioni invernali",
+    bike_title: "Bike",
+    bike_label: "Mostra tour in bici",
+    hut_title: "Malge",
+    hut_label: "Mostra malghe",
+    btn_hotel: "Vai all’hotel",
+    cta: "Apri il tour su Komoot",
+    rotate_hint: "Ruota per schermo intero"
+  }
+};
     let currentLang = "de";
 
     /***** === Karte initialisieren === *****/
