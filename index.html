@@ -296,6 +296,18 @@ body.pl-clean .rotate-hint,
   <script src="https://unpkg.com/maplibre-gl@3.6.2/dist/maplibre-gl.js"></script>
 
   <script>
+
+    /* === Mobile: Fullscreen-Button ausblenden === */
+@media (max-width: 768px) {
+  #btnFullscreen {
+    display: none !important;
+  }
+
+  /* auch MapLibre-Fullscreen-Control ausblenden */
+  .maplibregl-ctrl-fullscreen {
+    display: none !important;
+  }
+}
     /***** === Basis-Settings === *****/
     const IS_MOBILE =
       ("ontouchstart" in window) ||
