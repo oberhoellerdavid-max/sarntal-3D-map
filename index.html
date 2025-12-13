@@ -269,6 +269,20 @@ body.pl-clean .rotate-hint,
     display: none !important;
   }
 }
+    /* === Mobile: Fullscreen-Icon unauffällig parken === */
+@media (max-width: 768px) {
+
+  .maplibregl-ctrl-top-right {
+    top: auto !important;
+    bottom: 12px !important;
+    right: 8px !important;
+  }
+
+  .maplibregl-ctrl-fullscreen {
+    opacity: 0.25 !important;
+    transform: scale(0.9);
+  }
+}
   </style>
 </head>
 
