@@ -647,7 +647,7 @@ body.pl-clean .rotate-hint,
 
     /***** === Eigener Vollbild-Button === *****/
     const fsBtn = document.getElementById("btnFullscreen");
-    if(fsBtn){
+    if(fsBtn && !IS_MOBILE){
       fsBtn.addEventListener("click", ()=>{
         const app = document.getElementById("app");
         if(!document.fullscreenElement){
